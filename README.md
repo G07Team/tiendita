@@ -35,7 +35,7 @@ _4. Crear un entorno virtual con el siguiente comando_
 ```
 virtualenv venv
 ```
-_5. Activar el entorno virtual con el siguiente comando. Una vez activado podrás visualizar (venv) al inicio de la ruta en el terminal. _
+_5. Activar el entorno virtual con el siguiente comando. Una vez activado podrás visualizar (venv) al inicio de la ruta en el terminal._
 ```
 venv\Scripts\activate
 ```
@@ -43,11 +43,19 @@ _6. Ejecutar el siguiente comando para instalar todas las dependencias_
 ```
 pip install -r requirements.txt
 ```
-_7. Luego de haber instalado las dependencias, ejecutar el siguiente comando para levantar la aplicación._
+_7. Luego de haber instalado las dependencias, ejecutar el siguiente comando para correr las migraciones._
+```
+python manage.py migrate
+```
+_8. Ejecutar el siguiente comando para crear el superusuario. Ingresar el usuario, correo y password cuando te lo pida._
+```
+python manage.py createsuperuser
+```
+_9. Listo ya configuraste lo necesario. Ahora ejecuta el siguiente comando para levantar la aplicación._
 ```
 python manage.py runserver
 ```
-_8. Listo ya configuraste lo necesario. Ahora en tu navegador dirigite a http://127.0.0.1:8000/._
+Ahora en tu navegador dirigite a http://127.0.0.1:8000/
 
 
 ## Posibles errores que ocurran durante la instalación y configuración 🤬🤬
