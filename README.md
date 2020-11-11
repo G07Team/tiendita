@@ -57,6 +57,7 @@ python manage.py runserver
 ```
 Ahora en tu navegador dirigite a http://127.0.0.1:8000/
 
+** Si deseas ver la parte de administración de la tiendita, dirigete a http://127.0.0.1:8000/admin y logeate con el usuario y contraseña que creaste el superusuario.
 
 ## Posibles errores que ocurran durante la instalación y configuración 🤬🤬
 [Agregar el troubleshooting luego]
