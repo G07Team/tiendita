@@ -1,6 +1,11 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
+    {% if alert %}
+    <div class="alert alert-success" role="alert">
+      Pedido realizado con exito.
+    </div>
+    {% endif %}
 	<div class="row">
 		{% for product in products %}
 		<div class="col-lg-4">

@@ -1,13 +1,15 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 import json
 from datetime import date
 from .models import *
 from .utils import cookieCart, cartData, guestOrder
 from .service import get_products, save_pedido
 import random
+import requests
 
 def store(request):
+    print(request)
     data = cartData(request)
     print('data')
     print(data)
@@ -106,4 +108,10 @@ def processOrder(request):
     print(pedido)
     result = save_pedido(pedido)
     print(result.content)
-    return JsonResponse('Pedido Solicitado...', safe=False)
+    cartItems = 0
+    products = get_products()
+    list_products = products['productos']
+    context = {'products': list_products, 'cartItems': cartItems, "alert": True}
+    response = render(request, 'store/store.html', context)
+    response.delete_cookie('cart')
+    return response
