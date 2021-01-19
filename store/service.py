@@ -5,6 +5,7 @@ URI_PRODUCTOS = '/productos'
 URI_PRODUCTO_BY_ID = '/producto_details'
 URI_PEDIDOS = '/pedidos'
 
+
 def get_products():
     url = URL_API + URI_PRODUCTOS
     r = requests.get(url)
@@ -13,7 +14,7 @@ def get_products():
 
 
 def get_product_by_id(id):
-    url = URL_API + URI_PRODUCTO_BY_ID + '/'+ id
+    url = URL_API + URI_PRODUCTO_BY_ID + '/' + id
     r = requests.get(url)
     producto = r.json()
     producto_details = producto['producto']
