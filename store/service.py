@@ -1,6 +1,6 @@
 import requests
 
-URL_API = 'http://localhost/sigepe/public/api'
+URL_API = 'http://localhost/IMPACTOPEDIDOS/public/api'
 URI_PRODUCTOS = '/productos'
 URI_PRODUCTO_BY_ID = '/producto_details'
 URI_PEDIDOS = '/pedidos'
