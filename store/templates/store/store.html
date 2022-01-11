@@ -1,6 +1,7 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
+
     {% if alert %}
     <div class="alert alert-success" role="alert">
       Pedido realizado con exito.
@@ -16,11 +17,13 @@
 
 				<button data-product="{{product.id}}" data-action="add"
                         class="btn btn-outline-secondary add-btn update-cart">
-                    Añadir al carro</button>
-				
-				<a class="btn btn-outline-success" href="#">Ver</a>
-				<h4 style="display: inline-block; float: right"><strong>S/. {{product.precio_unitario}}</strong></h4>
-
+                    	Añadir al carro
+				</button>
+				<h4 style="display: inline-block; float: right">
+					<strong>
+						S/. {{product.precio_unitario}}
+					</strong>
+				</h4>
 			</div>
 		</div>
 		{% endfor %}
