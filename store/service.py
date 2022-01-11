@@ -1,6 +1,6 @@
 import requests
 
-URL_API = 'http://localhost/IMPACTOPEDIDOS/public/api'
+URL_API = 'http://infinite-sands-19778.herokuapp.com/api'
 URI_PRODUCTOS = '/productos'
 URI_PRODUCTO_BY_ID = '/producto_details'
 URI_PEDIDOS = '/pedidos'
